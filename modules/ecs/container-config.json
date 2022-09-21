@@ -1,0 +1,22 @@
+[
+    {
+        "name": "worker",
+        "image": "930354804502.dkr.ecr.eu-central-1.amazonaws.com/task1-repo:latest",
+        "memoryReservation": 300,
+        "logConfiguration": {
+            "logDriver": "awslogs",
+            "options": {
+                "awslogs-group": "/ecs/test",
+                "awslogs-region": "eu-central-1",
+                "awslogs-stream-prefix": "ecs"
+            }
+        },
+        "portMappings": [
+            {
+                "hostPort": 0,
+                "containerPort": 80,
+                "protocol": "tcp"
+            }
+        ]
+    }
+]
