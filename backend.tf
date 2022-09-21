@@ -4,5 +4,6 @@ terraform {
     bucket = "terraform-task-bucket"
     key    = "task/terraform.tfstate"
     region = "eu-central-1"
+    dynamodb_table = "shemer-db-table"
   }
 }
